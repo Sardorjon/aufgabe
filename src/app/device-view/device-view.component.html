@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card__left">
+    <a [routerLink]="goItemView(item)">
+      <h5 class="card__title">{{item.name}}</h5>
+    <p class="card__subtitle">{{item.deviceTypeId}}</p>
+    <p>Failsafe:<mat-icon class="card__icon">{{item.failsafe ? 'check':'close'}}</mat-icon></p>
+    </a>
+  </div>
+  <div class="card__right">
+    <mat-icon (click)="removeItem()">delete</mat-icon>
+  </div>
+</div>
